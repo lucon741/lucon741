@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+* {	  margin: 0;padding: 0;  }
+body {
+	  width: 960px;
+	  margin: 0 auto;
+	  font-family: Helvetica, Arial,sans-serif;
+	  font-size: 16px;
+	 }
+#header {width: 960px;height: 150px;}
+.logo {position: absolute;width: 120px;height: 120px;margin: 10px 50px;overflow: hidden;display: inline-block;}
+.logo img{width: 120px;height: 120px;}
+.logo:before {
+content: '';
+position: absolute;
+top: 0;
+left: -100px;
+width: 70px;
+height: 100%;
+transform: skewX(-30deg);
+animation-name: slide;
+animation-duration: 4s;
+animation-timing-function: ease-in-out;
+animation-delay: .2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+@keyframes slide {
+  0% {
+    left: -100;
+    top: 0;
+  }
+  50% {
+    left: 120px;
+    top: 0px;
+  }
+  100% {
+    left: 290px;
+    top: 0;
+  }
+}
+a {
+	color: black;
+  	display: block;  
+	text-decoration: none;
+}
+a:hover{color: red;}
+#container{width: 100%;height: auto;}
+.nav {list-style-type: none;height: 40px; width: 100%;margin-bottom: 20px;background:#3C5E93;font-size: 14px;font-weight: bold;}
+.nav li{display: inline;float: left;width: 15%;line-height: 40px;text-align: center;border-right:solid 1px #FFFFFF;}
+.nav li a{color: aliceblue;}
+.nav li:hover{background: #150F60;}
+.nav li a:hover{color: aqua;}
+.list_items{float: left;width: 200px;border: solid 2px;}
+.list_items h3{color: aliceblue;padding: 10 7px;background: #3C5E93;border-bottom: solid 2px;}
+.list_items li{list-style:none;margin: 10 5px;border-bottom: solid 1px #C0C0C0;}
+.content{float: right; width: 740px;}
+.product{float: left;width: 220px;height: 200px;margin: 10px;text-align: center;box-shadow: 1px 1px 1px #AAA;overflow: hidden;}
+.product_img{width: 200px;height: 120px;margin:15px auto;display: block;overflow: hidden;}
+.product_img img{width:100%;
+			transform-origin: 50% 65%;
+  			transition: transform 5s, filter 3s ease-in-out;
+  			filter: brightness(100%);}
+.product_img img:hover{filter: brightness(100%); transform: scale(1.5);}
+.service{float: left;width: 220px;height: 200px;margin: 10px;box-shadow: 1px 1px 1px #AAA;}
+.service img{width: 200px;height: 120px;margin:15px auto;display: block;}
+.detail{float: left;width: 99%;height: 600px;box-shadow:2px 2px 2px 2px #AAA; }
+.detail img{width: 400px;height: 240px;margin: 10px auto;display: block;}
+.detail h2{text-align: center;color: red;}
+.detail li{margin: 10 20px;}
+.clear-both{clear: both;display: block;height: 10px;}
+#footer{clear: both;background: #2CC0C7}
